@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+  --color-light-blue: hsl(0, 0%, 98%);
+  --color-white: white;
+
+  --font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+  background: var(--color-light-blue);
+}
+
+.title-primary, .title-strong {
+  font-size: 3rem;
+  color: var(--color-dark-blue);
+  font-weight: 200;
+}
+
+.text-primary {
+  color: var(--color-grayish-blue);
+  font-weight: 400;
+}
+
+.title-strong {
+  font-weight: 600;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.container {
+  margin: 6rem auto;
+  padding: 2rem;
+}
+
+.main-container .cards-container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px hsla(229, 6%, 66%, .4);
+}
+
+.main-container .cards-container .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--color-cyan);
+
+  border-radius: 12px 12px 0 0;
+}
+
+.main-container .cards-container .card:nth-child(2)::before {
+  background: var(--color-red);
+}
+
+.main-container .cards-container .card:nth-child(3)::before {
+  background: var(--color-orange);
+}
+
+.main-container .cards-container .card:nth-child(4)::before {
+  background: var(--color-blue);
+}
+
+.main-container .cards-container .card + .card {
+  margin-top: 2.5rem;
+}
+
+.main-container .cards-container .card img {
+  width: 60px;
+  height: 60px;
+  align-self: flex-end;
+}
+
+.main-container .cards-container .card .card-header {
+  margin-bottom: 3rem;
+}
+
+.main-container .cards-container .card .card-header h3 {
+  font-size: 2.2rem;
+}
+
+.main-container .cards-container .card .card-header p {
+  font-weight: 400;
+  font-size: 1.5rem;
+
+}
