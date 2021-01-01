@@ -54,7 +54,7 @@ header {
   padding: 2rem;
 }
 
-.main-container .cards-container .card {
+.cards-container .card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@ header {
   box-shadow: 0 10px 20px hsla(229, 6%, 66%, .4);
 }
 
-.main-container .cards-container .card::before {
+.cards-container .card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -76,38 +76,72 @@ header {
   border-radius: 12px 12px 0 0;
 }
 
-.main-container .cards-container .card:nth-child(2)::before {
+.cards-container div .card:nth-child(1)::before {
   background: var(--color-red);
 }
 
-.main-container .cards-container .card:nth-child(3)::before {
+.cards-container div .card:nth-child(2)::before {
   background: var(--color-orange);
 }
 
-.main-container .cards-container .card:nth-child(4)::before {
+.cards-container .card:nth-child(3)::before {
   background: var(--color-blue);
 }
 
-.main-container .cards-container .card + .card {
+.cards-container div + div {
   margin-top: 2.5rem;
 }
 
-.main-container .cards-container .card img {
+.cards-container .card img {
   width: 60px;
   height: 60px;
   align-self: flex-end;
 }
 
-.main-container .cards-container .card .card-header {
+.cards-container .card .card-header {
   margin-bottom: 3rem;
 }
 
-.main-container .cards-container .card .card-header h3 {
+.cards-container .card .card-header h3 {
   font-size: 2.2rem;
 }
 
-.main-container .cards-container .card .card-header p {
+.cards-container .card .card-header p {
   font-weight: 400;
   font-size: 1.5rem;
+
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container header {
+    max-width: 450px;
+  }
+
+  .container header h1 {
+    margin-bottom: 2rem;
+  }
+
+  .cards-container {
+    display: flex;
+  }
+
+  .cards-container .card {
+    justify-self: center;
+    align-self: center;
+    min-width: min-content;
+    max-width: 400px;
+  }
+
+  .cards-container > div {
+    margin: 0 20px;
+  }
 
 }
