@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://ik.imagekit.io/xfddek6eqk/ezgif.com-gif-maker_nCdGAEr8Z8.gif" alt="card features">
+</p>
+
 # Sumário
 - [Sobre](#-Sobre)
 - [Desafios](#-Desafios)
